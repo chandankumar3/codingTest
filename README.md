@@ -1,1 +1,3 @@
 # codingTest
+
+composer dump-autoload
