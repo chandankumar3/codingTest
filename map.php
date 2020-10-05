@@ -6,6 +6,6 @@ require realpath("vendor/autoload.php");
 
 $options = getopt("road_type",['road_type','road_length']);
 var_dump($options);
-die;
 
 $test= new MappingController();
+$test->calculateDistance();
