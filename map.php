@@ -4,8 +4,22 @@ ini_set("display_errors",1);
 use App\Controllers\MappingController;
 require realpath("vendor/autoload.php");
 
-$options = getopt("road_type",['road_type','road_length']);
-var_dump($options);
+$shortopts  = "";
+$shortopts .= "r:";  // Required value
+$shortopts .= "l"; // Optional value
+
+$longopts  = array(
+    "road_type:",     // Required value
+    "road_length:",    // Optional value
+);
+$options = getopt($shortopts, $longopts);
+
+
+if(empty($options['road_type']) || empty($options['road_length'])){
+   echo "missing required value:road type(-r) or road length(-l)";exit;
+
+}
+
 
 $test= new MappingController();
-$test->calculateDistance();
+$test->calculateDistance($options['road_type'],$options['road_length']);

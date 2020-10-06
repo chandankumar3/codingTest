@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Lib\Mapping;
+use App\Contracts\Mapping;
 
 class MappingController implements Mapping{
   protected $roadType;
@@ -22,7 +22,7 @@ class MappingController implements Mapping{
   	  $speed=70*.75;
   	  $fuelCapacity=200;
   	  $rangeUrban=.75;
-
+die("test");
   	  while(true){
 
   	  }
