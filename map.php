@@ -16,7 +16,7 @@ $options = getopt($shortopts, $longopts);
 
 
 if(empty($options['road_type']) || empty($options['road_length'])){
-   echo "missing required value:road type(-r) or road length(-l)";exit;
+   echo "missing required value:road type(--road_type) or road length(--road_length)";exit;
 
 }
 
